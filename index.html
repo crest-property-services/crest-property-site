@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crest Property Services | Private Property Care & Concierge</title>
+    <!-- Google Fonts for Flyer Typography Mapping -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for the Flyer Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
     <style>
+        /* Color Palette from Flyer */
         :root {
-            --navy: #0e1e2b;
-            --gold: #b38b4d;
-            --cream: #fbf9f4;
-            --text-dark: #2c2c2c;
-            --text-muted: #555555;
-            --border-color: #e2dacd;
+            --navy: #0d233a;
+            --gold: #b38f4f;
+            --cream: #f4f1ea;
+            --white: #ffffff;
+            --dark-text: #222222;
         }
 
         * {
@@ -21,256 +28,305 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            color: var(--text-dark);
-            background-color: var(--cream);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-text);
+            background-color: var(--white);
             line-height: 1.6;
         }
 
-        /* Header / Hero Section */
+        /* Hero Header Section */
         header {
             background-color: var(--cream);
             text-align: center;
-            padding: 3rem 1rem 2rem;
-            border-bottom: 1px solid var(--border-color);
+            padding: 60px 20px;
+            border-bottom: 4px solid var(--gold);
         }
 
-        .brand-title {
-            font-size: 2.8rem;
-            letter-spacing: 2px;
+        .logo-area {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Mountain Icon/Graphic placeholder */
+        .mountain-graphic {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            letter-spacing: 4px;
             color: var(--navy);
-            text-transform: uppercase;
-            margin-bottom: 0.2rem;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
-        .brand-subtitle {
-            font-size: 1.8rem;
+        .services-tag {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
             letter-spacing: 6px;
             color: var(--navy);
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            font-weight: normal;
+            margin: 10px 0;
+            font-weight: 500;
         }
 
-        .tagline {
+        .sub-tag {
+            font-family: 'Playfair Display', serif;
             font-style: italic;
             font-size: 1.2rem;
             color: var(--gold);
-            margin-bottom: 0.5rem;
+            margin-bottom: 15px;
         }
 
         .locations {
-            font-family: 'Arial', sans-serif;
             font-size: 0.85rem;
-            letter-spacing: 2px;
-            color: var(--text-muted);
             text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--navy);
+            font-weight: 600;
         }
 
-        /* Hero Banner Section */
-        .hero-banner {
+        /* Banner Statement Area */
+        .banner {
             background-color: var(--navy);
-            color: #ffffff;
+            color: var(--white);
             text-align: center;
-            padding: 2.5rem 1rem;
+            padding: 40px 20px;
         }
 
-        .hero-banner h2 {
+        .banner h2 {
+            font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-weight: normal;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            color: var(--white);
+            font-weight: 500;
+            margin-bottom: 10px;
         }
 
-        .hero-banner p {
-            font-family: 'Arial', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            color: #c5d3df;
+        .banner p {
+            font-size: 0.9rem;
             text-transform: uppercase;
-        }
-
-        /* Services Grid */
-        .services-container {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem 3rem;
-        }
-
-        .service-card {
-            border-left: 2px solid var(--gold);
-            padding-left: 1.2rem;
-        }
-
-        .service-card h3 {
-            font-family: 'Arial', sans-serif;
-            font-size: 1.05rem;
-            letter-spacing: 1px;
-            color: var(--navy);
-            text-transform: uppercase;
-            margin-bottom: 0.4rem;
-        }
-
-        .service-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Callout Bar */
-        .callout-bar {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            max-width: 800px;
-            margin: 2rem auto;
-        }
-
-        .callout-bar h3 {
-            font-style: italic;
-            font-size: 1.6rem;
-            color: var(--navy);
-            font-weight: normal;
-            margin-bottom: 1rem;
-        }
-
-        .badges {
-            font-family: 'Arial', sans-serif;
-            font-size: 0.85rem;
             letter-spacing: 2px;
-            color: var(--text-dark);
-            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid Section */
+        .services-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2rem; }
+            .services-tag { font-size: 1.1rem; }
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .icon-box {
+            background-color: var(--cream);
+            border: 2px solid var(--gold);
+            color: var(--navy);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .service-text h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: var(--navy);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .service-text p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        /* Badge Callouts */
+        .badges {
+            text-align: center;
+            margin: 50px 0 20px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--navy);
+            border-top: 1px solid var(--gold);
+            padding-top: 30px;
+        }
+
+        .badge-row {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
         }
 
-        /* Contact / Footer Section */
+        .badge-row span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-row i {
+            color: var(--gold);
+        }
+
+        /* Contact Footer Section */
         footer {
             background-color: var(--navy);
-            color: #ffffff;
-            padding: 2.5rem 1rem;
+            color: var(--white);
+            padding: 50px 20px 20px;
             text-align: center;
+            border-top: 4px solid var(--gold);
         }
 
-        .contact-info {
+        .contact-container {
             display: flex;
             justify-content: center;
-            gap: 3rem;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
-            font-family: 'Arial', sans-serif;
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto 40px;
         }
 
-        .contact-item h4 {
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .contact-method i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .contact-method div p:first-child {
             font-size: 0.8rem;
-            letter-spacing: 1px;
-            color: #9cb1c2;
             text-transform: uppercase;
-            margin-bottom: 0.3rem;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        .contact-item a {
-            color: #ffffff;
+        .contact-method div p:last-child {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .contact-method a {
+            color: var(--white);
             text-decoration: none;
-            font-size: 1.2rem;
         }
-
-        .contact-item a:hover {
+        
+        .contact-method a:hover {
             color: var(--gold);
         }
 
         .footer-bottom {
-            font-family: 'Arial', sans-serif;
             font-size: 0.75rem;
-            letter-spacing: 2px;
-            color: #7a93a8;
             text-transform: uppercase;
-            border-top: 1px solid #1d3547;
-            padding-top: 1.5rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Header -->
+    <!-- Top Branding Block -->
     <header>
-        <h1 class="brand-title">Crest Property</h1>
-        <h2 class="brand-subtitle">Services</h2>
-        <p class="tagline">Private Property Care & Concierge Services</p>
-        <p class="locations">Denver &bull; The Front Range &bull; Mountain Properties</p>
+        <div class="logo-area">
+            <div class="mountain-graphic"><i class="fa-solid fa-mountain-subpeaks"></i></div>
+            <h1>CREST PROPERTY</h1>
+            <div class="services-tag">— SERVICES —</div>
+            <div class="sub-tag">Private Property Care & Concierge Services</div>
+            <div class="locations">Denver &bull; The Front Range &bull; Mountain Properties</div>
+        </div>
     </header>
 
-    <!-- Banner -->
-    <section class="hero-banner">
+    <!-- Callout Banner -->
+    <section class="banner">
         <h2>Exceptional Care. Trusted Oversight.</h2>
-        <p>For Residences, Second Homes, Rentals & Select Commercial Properties</p>
+        <p>For Residences, Second Homes, Rentals & Select Commercial Properties.</p>
     </section>
 
-    <!-- Services Grid -->
-    <main class="services-container">
-        <div class="service-card">
-            <h3>Property Concierge</h3>
-            <p>Personalized oversight for residences, rentals & second homes.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Property Preparation</h3>
-            <p>Move-in, move-out, guest-ready and seasonal preparation.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Exterior Care</h3>
-            <p>Window care, screen replacement, exterior detailing & preservation.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Home Updates & Modernization</h3>
-            <p>Fixture upgrades, cosmetic improvements and modernization.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Preventive Maintenance</h3>
-            <p>Inspections, filters, detectors and routine property care.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Seasonal & Absence Services</h3>
-            <p>Peace of mind while you're away, with your property professionally monitored and prepared.</p>
-        </div>
-    </main>
-
-    <!-- Callout Section -->
-    <section class="callout-bar">
-        <h3>Your property. Our attention to every detail.</h3>
-        <div class="badges">
-            <span>&check; Insured</span>
-            <span>&check; Local</span>
-            <span>&check; Detail-Oriented</span>
-        </div>
-    </section>
-
-    <!-- Contact Footer -->
-    <footer>
-        <div class="contact-info">
-            <div class="contact-item">
-                <h4>Call or Text</h4>
-                <a href="tel:7204325623">(720) 432-5623</a>
+    <!-- Services Grid Context Layout -->
+    <section class="services-section">
+        <div class="grid">
+            <!-- Item 1 -->
+            <div class="service-item">
+                <div class="icon-box"><i class="fa-solid fa-house-user"></i></div>
+                <div class="service-text">
+                    <h3>Property Concierge</h3>
+                    <p>Personalized oversight for residences, rentals & second homes.</p>
+                </div>
             </div>
-            <div class="contact-item">
-                <h4>Email</h4>
-                <a href="mailto:direct@crestpropertyservices.com">direct@crestpropertyservices.com</a>
+            <!-- Item 2 -->
+            <div class="service-item">
+                <div class="icon-box"><i class="fa-solid fa-clipboard-list"></i></div>
+                <div class="service-text">
+                    <h3>Property Preparation</h3>
+                    <p>Move-in, move-out, guest-ready and seasonal preparation.</p>
+                </div>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            Quality Property Care &bull; Peace of Mind &bull; Crest Property Services
-        </div>
-    </footer>
-
-</body>
-</html>
+            <!-- Item 3 -->
+            <div class="service-item">
+                <div class="icon-box"><i class="fa-solid fa-mountain"></i></div>
+                <div class="service-text">
+                    <h3>Exterior Care</h3>
+                    <p>Window care, screen replacement, exterior detailing & preservation.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="service-item">
+                <div class="icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <div class="service-text">
+                    <h3>Home Updates & Modernization</h3>
+                    <p>Fixture upgrades, cosmetic improvements and modernization.</p>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="service-item">
+                <div class="icon-box"><i class="fa-solid fa-shield-heart"></i></div>
+                <div class="service-text">
+                    <h3>Preventive Maintenance</h3>
+                    <p>Inspections, filters, detectors and routine property care.</p>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="service-item">
+                <div class="icon-box"><i class="fa-solid fa-snowflake"></i></div>
+                <div class="service-text">
